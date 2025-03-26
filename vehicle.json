@@ -1,0 +1,76 @@
+[
+  {
+    "numberPlate": "GJ01AB1234",
+    "status": "AVAILABLE",
+    "station": "605c72d9f1a5b23c84e1d5b3",
+    "chargingStatus": {
+      "level": 78
+    },
+    "damages": [
+      {
+        "description": "Minor scratch on left handle",
+        "images": ["https://example.com/damage1.jpg"],
+        "reportedAt": "2025-03-18T10:45:00Z"
+      }
+    ],
+    "pricePerHour": 25
+  },
+  {
+    "numberPlate": "GJ01CD5678",
+    "status": "UNAVAILABLE",
+    "station": "605c72d9f1a5b23c84e1d5b4",
+    "chargingStatus": {
+      "level": 20
+    },
+    "damages": [
+      {
+        "description": "Flat tire",
+        "images": ["https://example.com/damage2.jpg"],
+        "reportedAt": "2025-03-20T14:30:00Z"
+      }
+    ],
+    "pricePerHour": 30
+  },
+  {
+    "numberPlate": "GJ01EF9101",
+    "status": "AVAILABLE",
+    "station": "605c72d9f1a5b23c84e1d5b5",
+    "chargingStatus": {
+      "level": 95
+    },
+    "damages": [],
+    "pricePerHour": 20
+  },
+  {
+    "numberPlate": "GJ01GH2345",
+    "status": "AVAILABLE",
+    "station": "605c72d9f1a5b23c84e1d5b6",
+    "chargingStatus": {
+      "level": 45
+    },
+    "damages": [
+      {
+        "description": "Broken indicator",
+        "images": ["https://example.com/damage3.jpg"],
+        "reportedAt": "2025-03-15T08:20:00Z"
+      }
+    ],
+    "pricePerHour": 22
+  },
+  {
+    "numberPlate": "GJ01IJ6789",
+    "status": "UNAVAILABLE",
+    "station": "605c72d9f1a5b23c84e1d5b7",
+    "chargingStatus": {
+      "level": 12
+    },
+    "damages": [
+      {
+        "description": "Dead battery",
+        "images": ["https://example.com/damage4.jpg"],
+        "reportedAt": "2025-03-19T11:10:00Z"
+      }
+    ],
+    "pricePerHour": 28
+  }
+]

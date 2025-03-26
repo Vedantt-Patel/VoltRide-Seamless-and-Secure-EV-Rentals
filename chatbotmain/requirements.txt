@@ -1,0 +1,16 @@
+streamlit
+langchain-groq
+langchain-openai
+langchain-community
+langchain-core
+langchain-huggingface
+openai
+python-dotenv
+ml_dtypes>=0.4.0
+opt_einsum
+absl-py
+flatbuffers>=2.0
+matplotlib
+sentencepiece
+numpy<2
+protobuf<5,>=4.25.3

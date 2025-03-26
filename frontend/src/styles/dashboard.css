@@ -1,0 +1,661 @@
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.app.light {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.station-overview {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.station-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.status-badge.open {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-badge.closed {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Charging Ports Styles */
+.charging-ports {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.ports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.port-card {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.port-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.port-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+}
+
+.port-type.fast {
+  background-color: #2196f3;
+  color: white;
+}
+
+.port-type.slow {
+  background-color: #ff9800;
+  color: white;
+}
+
+.port-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.utilization-chart {
+  width: 80px;
+  height: 80px;
+}
+
+/* Vehicle Fleet Styles */
+.vehicle-fleet {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.vehicle-card {
+  background: var(--card-bg-secondary);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.vehicle-icon {
+  background: var(--primary-color);
+  padding: 0.75rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.vehicle-id {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.battery-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.status.available {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status.in-use {
+  background-color: #2196f3;
+  color: white;
+}
+
+.status.maintenance {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Booking Summary Styles */
+.booking-summary {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.booking-card {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.payment-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.detail-row svg {
+  color: var(--text-secondary);
+}
+
+/* Revenue Summary Styles */
+.revenue-summary {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.revenue-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-box.warning .amount {
+  color: #ffa500;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-box {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.chart-box h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Maintenance Alerts Styles */
+.maintenance-alerts {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert-card {
+  background: var(--card-bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.alert-icon {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-id {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.priority-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.875rem;
+  margin-left: auto;
+}
+
+.alert-description {
+  margin-bottom: 0.5rem;
+}
+
+.alert-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Notification Panel Styles */
+.notification-panel {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.notification-count {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.notification-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--card-bg-secondary);
+  border-radius: 8px;
+}
+
+.notification-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Header Styles */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  margin-left: 0.5rem;
+  outline: none;
+  width: 100%;
+  color: inherit;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #f44336;
+  color: white;
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.user-avatar {
+  background: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: var(--card-bg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--card-bg-secondary);
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 1.5rem 0;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar-menu li.active a {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar-menu li:not(.active) a:hover {
+  background: var(--card-bg-secondary);
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--card-bg-secondary);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Responsive adjustments for sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .logo h2 {
+    display: none;
+  }
+
+  .sidebar-menu li a span,
+  .logout-btn span,
+  .user-info {
+    display: none;
+  }
+
+  .sidebar-menu li a {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+
+  .logout-btn {
+    justify-content: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ports-grid,
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Make sure card elements have proper styling */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
