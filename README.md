@@ -78,20 +78,21 @@ To set up the project, follow these steps:
 ### 2️⃣ Backend Setup
 ```bash
  cd backend
+ cd src
  npm install  # Install dependencies
- npm start    # Start backend server
+ node app.js    # Start backend server
 ```
 
 ### 3️⃣ Frontend Setup
 ```bash
  cd frontend
  npm install  # Install dependencies
- npm start    # Start frontend server
+ npm run dev    # Start frontend server
 ```
 
 ### 4️⃣ Chatbot Service Setup
 ```bash
- cd chatbot
+ cd chatbotmain
  python -m venv venv  # Create virtual environment
  source venv/bin/activate  # (Linux/macOS)
  venv\Scripts\activate  # (Windows)
