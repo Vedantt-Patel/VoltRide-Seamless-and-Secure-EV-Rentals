@@ -71,8 +71,7 @@ To set up the project, follow these steps:
 
 ### 1️⃣ Clone the Repository
 ```bash
- git clone https://github.com/your-repo-url.git
- cd ev-rental-platform
+ git clone https://github.com/Vedantt-Patel/VoltRide-Seamless-and-Secure-EV-Rentals.git
 ```
 
 ### 2️⃣ Backend Setup
