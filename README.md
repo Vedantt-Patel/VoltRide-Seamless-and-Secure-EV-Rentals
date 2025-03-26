@@ -1,4 +1,4 @@
-# EV Rental Platform - README
+# EV Rental Platform - VoltRide
 
 ## 📌 Overview
 This project is a secure and user-friendly **EV rental platform** designed to streamline vehicle booking, verification, and payments. Built during **Breach 2025 - Gujarat's Largest FinTech Hackathon**, our solution stands out with **QR-based automated workflows, AI chatbots, dual-layer KYC verification, and seamless payments**.
